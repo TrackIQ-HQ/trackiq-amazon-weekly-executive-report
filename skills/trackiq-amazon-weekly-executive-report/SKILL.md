@@ -39,6 +39,8 @@ bands added.
 3. **Week anchor** — most accounts are Sunday-Saturday
 4. **Product lines** — how ASINs roll up, since no API knows your grouping
 5. **Inventory bands** — the account's own days-of-cover cutoffs
+6. **Delivery** — in-chat, file, Slack, n8n or email, and the target for
+   whichever is chosen
 
 If the runtime has no filesystem, print the same block and ask the user to
 paste it into their project instructions once.
@@ -57,7 +59,35 @@ mid-send.
 - `assets/account.example.md` — the first-run answers, filled in once
 
 Copy `assets/template.html` and replace its content. Do not rebuild the
-shell. The template also references `assets/trackiq-logo-white.png`.
+shell. The template also references `assets/trackiq-logo-white.png` and
+`assets/trackiq-bug-white.png`.
+
+## Delivery
+
+The report is always produced in the chat first. Delivery is the last
+step, and the method comes from the Delivery block in account.md — never
+ask per send.
+
+| Method | What to do | Needs |
+|---|---|---|
+| `in-chat` | Return the HTML. The default, and the fallback for every other method. | nothing |
+| `file` | Write it beside the skill as `<name>-<YYYY-MM-DD>.html`. | a filesystem |
+| `slack` | Post the lead headline and the decision list as text, then upload the HTML as a file attachment. Slack will not render the email markup inline — never paste raw HTML into a message. | a connected Slack tool |
+| `n8n` | POST the HTML as the request body to the configured webhook, `Content-Type: text/html`. Report the status code back. | network access |
+| `email` | Hand it to the connected mail tool with the subject line from the masthead. | a connected mail tool |
+
+Three rules:
+
+1. **Confirm before the first outward send of a session.** Slack, n8n and
+   email all publish outside the chat. Show the recipient or channel and
+   wait for a yes. In-chat and file need no confirmation.
+2. **Fall back loudly.** If the configured method is not available in this
+   runtime, return the report in-chat and say which method was skipped and
+   why. Never fail silently, and never substitute a different outward
+   channel.
+3. **Delivery config is not report content.** Naming Slack or n8n here does
+   not breach the rule against naming platforms — that rule governs what
+   appears inside the rendered email, which never mentions any of them.
 
 ## Non-negotiables
 

@@ -9,6 +9,28 @@ Claude Code, Claude web, Claude desktop and ChatGPT from the same folder.
 
 ---
 
+
+---
+
+## Powered by the TrackIQ MCP
+
+These skills read your live Amazon account through the
+**[TrackIQ MCP](https://trackiq.com/mcp)** — 16 tools connecting your AI
+assistant to Amazon data:
+
+| | | |
+|---|---|---|
+| Sales & Traffic | Orders | Inventory |
+| Returns | Sponsored Products | Sponsored Brands |
+| Sponsored Display | Amazon DSP | AMC Cloud |
+| Keywords | Search Terms | Targeting |
+| Search Query Performance | Organic Rank | Best Seller Rank |
+| Buy Box History | Brand Analytics | Export |
+
+Works with Claude, ChatGPT and Cursor. **[Get access →](https://trackiq.com/mcp)**
+
+---
+
 ## What you get
 
 One self-contained `.html` email, table-based and inline-styled, that
@@ -77,6 +99,7 @@ The skill interviews you once and never asks again.
 3. **Week anchor** — most accounts are Sunday-Saturday
 4. **Product lines** — how your ASINs roll up
 5. **Inventory bands** — the account's own days-of-cover cutoffs
+6. **Delivery** — in-chat, file, Slack, n8n or email
 
 Answers live in `account.md`, copied from
 [`assets/account.example.md`](skills/trackiq-amazon-weekly-executive-report/assets/account.example.md).
@@ -88,6 +111,26 @@ add the week anchor and inventory bands and you're done.
 Point 5 matters more than it looks. Days-of-cover cutoffs are per-account —
 a 14-day critical band is right for one brand and badly wrong for another,
 and the skill will never assume 21/42 for you.
+
+## Delivery
+
+Where the finished report goes is asked once at setup and stored in
+`account.md`. The report is always produced in the chat first; delivery is
+the last step.
+
+| Method | What happens | Needs |
+|---|---|---|
+| **In-chat** | The HTML comes back in the conversation. Default. | nothing |
+| **File** | Saved beside the skill, dated. | a filesystem |
+| **Slack** | Headline and decisions posted as text, HTML attached as a file. | a connected Slack tool |
+| **n8n** | POSTed to your webhook as `text/html`, status reported back. | network access |
+| **Email** | Handed to your connected mail tool. | a connected mail tool |
+
+Slack, n8n and email publish outside the chat, so the skill shows you the
+channel or recipient and waits for a yes before the first send of a
+session. If the configured method isn't available in whatever runtime
+you're in, you get the report in-chat with a note saying what was skipped —
+it never silently switches to a different outward channel.
 
 ## Customizing
 

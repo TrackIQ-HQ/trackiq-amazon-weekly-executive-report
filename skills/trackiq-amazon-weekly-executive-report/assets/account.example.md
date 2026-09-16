@@ -39,3 +39,17 @@ The account's own days-of-cover cutoffs. Never assume 21/42.
 | Critical | under 14 |
 | Tight | 14 to 28 |
 | Healthy | over 28 |
+
+## Delivery
+
+How the finished report leaves the chat. Asked once at first run.
+
+| Field | Value |
+|---|---|
+| Method | in-chat |
+| Target | — |
+| Confirm before sending | yes |
+
+Methods: `in-chat` (default, always works) · `file` (saved beside the
+skill) · `slack` (target = channel, e.g. `#amazon-ads`) · `n8n` (target =
+the webhook URL) · `email` (target = recipients).

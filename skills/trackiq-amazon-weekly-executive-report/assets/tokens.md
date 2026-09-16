@@ -79,6 +79,22 @@ with more than 4 numeric columns get `overflow-x:auto` on a wrapping
 `<div>` (rare in email, acceptable degradation — state totals in prose
 above the table so the number survives even if the table clips).
 
+## Logo
+
+Two files ship with the skill, both white, because both placements sit on
+sage. The ink and sage variants live in the TrackIQ brand-standards
+bundle; add one here only if a light-background placement is introduced.
+
+| File | Where | Size |
+|---|---|---|
+| `assets/trackiq-logo-white.png` | masthead, on the `#17533F` bar | 140x38 |
+| `assets/trackiq-bug-white.png` | footer, on the sage bar | 40x28 |
+
+The lockup stops being legible below about 120px wide — the letterforms
+inside the braces close up — so the masthead runs at 140px and anything
+smaller takes the bug instead. The bug is a signature, never scaled up to
+stand in for the lockup.
+
 ## Against the brand standard
 
 These files are the email-safe subset of the TrackIQ Heritage Sage
