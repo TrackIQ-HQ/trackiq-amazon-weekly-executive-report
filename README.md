@@ -1,5 +1,3 @@
-[![TrackIQ MCP — connect your AI assistant to Amazon data. 16 tools, full MCP access, $69/mo. Works with Claude, ChatGPT and Cursor.](.github/trackiq-mcp-banner.png)](https://trackiq.com/mcp)
-
 # TrackIQ: Amazon Weekly Executive Report
 
 The Monday client send. A week-over-week Amazon recap that someone who
@@ -11,10 +9,9 @@ Claude Code, Claude web, Claude desktop and ChatGPT from the same folder.
 
 ---
 
-
----
-
 ## Powered by the TrackIQ MCP
+
+[![TrackIQ MCP — connect your AI assistant to Amazon data. 16 tools, full MCP access, $69/mo. Works with Claude, ChatGPT and Cursor.](.github/trackiq-mcp-banner.png)](https://trackiq.com/mcp)
 
 These skills read your live Amazon account through the
 **[TrackIQ MCP](https://trackiq.com/mcp)** — 16 tools connecting your AI
