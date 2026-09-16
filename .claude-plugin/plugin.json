@@ -1,0 +1,10 @@
+{
+  "name": "trackiq-amazon-weekly-executive-report",
+  "version": "1.0.0",
+  "description": "TrackIQ: Amazon Weekly Executive Report — a client-ready week-over-week Amazon recap built from TrackIQ MCP data.",
+  "author": { "name": "TrackIQ", "url": "https://trackiq.com" },
+  "homepage": "https://trackiq.com/skills/trackiq-amazon-weekly-executive-report",
+  "repository": "https://github.com/TrackIQ-HQ/trackiq-amazon-weekly-executive-report",
+  "license": "MIT",
+  "keywords": ["amazon", "amazon-seller", "amazon-ads", "advertising", "reporting", "ppc", "dsp", "acos", "tacos", "weekly-report", "client-reporting", "claude-skill", "agent-skills", "trackiq"]
+}
