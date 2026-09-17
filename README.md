@@ -29,6 +29,10 @@ Works with Claude, ChatGPT and Cursor. **[Get access →](https://trackiq.com/mc
 
 ## What you get
 
+![A TrackIQ Weekly Executive Report — cover and executive summary, pacing and marginal return, keyword economics and actions](.github/preview.png)
+
+*One send, three views: the cover and executive summary, pacing and where the money went, then keyword economics, inventory and the week's decisions.*
+
 One self-contained `.html` email, table-based and inline-styled, that
 renders in Outlook and Apple Mail without a build step.
 
