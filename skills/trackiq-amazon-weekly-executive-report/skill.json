@@ -1,6 +1,7 @@
 {
   "name": "trackiq-amazon-weekly-executive-report",
   "title": "TrackIQ: Amazon Weekly Executive Report",
+  "category": "operations",
   "version": "1.0.0",
   "updated": "2026-09-16",
   "summary": "A client-ready week-over-week Amazon recap \u2014 scorecard, pacing against the brand's own trailing four-week average, per-line marginal return, DSP breakout, keyword economics, inventory days-of-cover and this week's decisions.",
